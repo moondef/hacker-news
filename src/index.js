@@ -7,10 +7,13 @@ class HackerNews {
 
   async getPopular() {
     const { baseUrl } = this;
-    const url = "/topstories.json";
 
     try {
-      const response = rp(`${baseUrl}/${url}`);
+      const response = rp({
+        baseUrl,
+        url: "/topstories.json",
+        json: true
+      });
 
       return response;
     } catch (err) {
@@ -20,10 +23,13 @@ class HackerNews {
 
   async getItem(itemID) {
     const { baseUrl } = this;
-    const url = `/item/${itemID}.json`;
 
     try {
-      const response = await rp(`${baseUrl}/${url}`);
+      const response = rp({
+        baseUrl,
+        url: `/item/${itemID}.json`,
+        json: true
+      });
 
       return response;
     } catch (err) {
