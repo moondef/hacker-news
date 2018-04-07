@@ -21,6 +21,22 @@ class HackerNews {
     }
   }
 
+  async getUser(nickname) {
+    const { baseUrl } = this;
+
+    try {
+      const response = rp({
+        baseUrl,
+        url: `/user/${nickname}.json`,
+        json: true
+      });
+
+      return response;
+    } catch (err) {
+      throw err;
+    }
+  }
+
   async getItem(itemID) {
     const { baseUrl } = this;
 
