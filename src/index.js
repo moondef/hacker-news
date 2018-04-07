@@ -70,6 +70,4 @@ class HackerNews {
   }
 }
 
-// /v0/askstories
-
 module.exports = HackerNews;
