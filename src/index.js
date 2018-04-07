@@ -52,6 +52,22 @@ class HackerNews {
       throw err;
     }
   }
+
+  async getAskStories() {
+    const { baseUrl } = this;
+
+    try {
+      const response = rp({
+        baseUrl,
+        url: "/askstories.json",
+        json: true
+      });
+
+      return response;
+    } catch (err) {
+      throw err;
+    }
+  }
 }
 
 module.exports = HackerNews;
