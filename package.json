@@ -1,6 +1,6 @@
 {
   "name": "@moondef/hacker-news-api",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "API for news.ycombinator.com",
   "main": "index.js",
   "scripts": {
