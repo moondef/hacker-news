@@ -116,6 +116,22 @@ class HackerNews {
       throw err;
     }
   }
+
+  async getNewStories() {
+    const { baseUrl } = this;
+
+    try {
+      const response = rp({
+        baseUrl,
+        url: "/newstories.json",
+        json: true
+      });
+
+      return response;
+    } catch (err) {
+      throw err;
+    }
+  }
 }
 
 module.exports = HackerNews;
