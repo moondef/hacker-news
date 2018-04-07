@@ -148,6 +148,22 @@ class HackerNews {
       throw err;
     }
   }
+
+  async getBestStories() {
+    const { baseUrl } = this;
+
+    try {
+      const response = rp({
+        baseUrl,
+        url: "/beststories.json",
+        json: true
+      });
+
+      return response;
+    } catch (err) {
+      throw err;
+    }
+  }
 }
 
 module.exports = HackerNews;
