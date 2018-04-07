@@ -1,13 +1,13 @@
-const rp = require('request-promise');
+const rp = require("request-promise");
 
 class HackerNews {
-  constructor () {
-    this.baseUrl = 'https://hacker-news.firebaseio.com/v0/';
+  constructor() {
+    this.baseUrl = "https://hacker-news.firebaseio.com/v0/";
   }
 
-  async getPopular () {
+  async getPopular() {
     const { baseUrl } = this;
-    const url = '/topstories.json';
+    const url = "/topstories.json";
 
     try {
       const response = rp(`${baseUrl}/${url}`);
@@ -18,12 +18,12 @@ class HackerNews {
     }
   }
 
-  async getItem (itemID) {
+  async getItem(itemID) {
     const { baseUrl } = this;
     const url = `/item/${itemID}.json`;
 
     try {
-      const response = await rp (`${baseUrl}/${url}`);
+      const response = await rp(`${baseUrl}/${url}`);
 
       return response;
     } catch (err) {
