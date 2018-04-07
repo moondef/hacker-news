@@ -1,5 +1,5 @@
 # hacker-news-api
-### API for API for news.ycombinator.com
+### API for news.ycombinator.com
 
 ## Usage
 ```
