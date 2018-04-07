@@ -100,6 +100,22 @@ class HackerNews {
       throw err;
     }
   }
+
+  async getUpdates() {
+    const { baseUrl } = this;
+
+    try {
+      const response = rp({
+        baseUrl,
+        url: "/updates.json",
+        json: true
+      });
+
+      return response;
+    } catch (err) {
+      throw err;
+    }
+  }
 }
 
 module.exports = HackerNews;
