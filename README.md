@@ -12,9 +12,8 @@ const hk = new HackerNewsApi;
 
 (async () => {
   const popular = await hk.getPopular(); // you will get IDs of popular news
-  const popularArr = JSON.parse(popular);
+  const newsItem = await hk.getItem(popular[0]);
 
-  const newsItem = await hk.getItem(popularArr[0]);
   console.log(newsItem);
 })();
 
