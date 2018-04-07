@@ -36,6 +36,22 @@ class HackerNews {
       throw err;
     }
   }
+
+  async getMaxItem() {
+    const { baseUrl } = this;
+
+    try {
+      const response = rp({
+        baseUrl,
+        url: "/maxitem.json",
+        json: true
+      });
+
+      return response;
+    } catch (err) {
+      throw err;
+    }
+  }
 }
 
 module.exports = HackerNews;
