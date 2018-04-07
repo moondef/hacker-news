@@ -132,6 +132,22 @@ class HackerNews {
       throw err;
     }
   }
+
+  async getTopStories() {
+    const { baseUrl } = this;
+
+    try {
+      const response = rp({
+        baseUrl,
+        url: "/topstories.json",
+        json: true
+      });
+
+      return response;
+    } catch (err) {
+      throw err;
+    }
+  }
 }
 
 module.exports = HackerNews;
