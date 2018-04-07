@@ -2,6 +2,10 @@
 ### API for API for news.ycombinator.com
 
 ## Usage
+```
+$ npm install --save @moondef/hacker-news-api
+```
+
 ```js
 const hk = require('@moondef/hacker-news-api')();
 (async () => {
