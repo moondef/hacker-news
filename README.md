@@ -18,3 +18,18 @@ const hk = new HackerNewsApi;
 })();
 
 ```
+
+## Methods
+```js
+- getPopular() // Array
+- getUser(nickname) // Object
+- getItem(id) // Object
+- getMaxItem() // Number
+- getAskStories() // Array
+- getShowStories() // Array
+- getJobStories() // Array
+- getUpdates() // Object
+- getNewStories() // Array
+- getTopStories() // Array
+- getBestStories() // Array
+```
