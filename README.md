@@ -3,7 +3,7 @@
 
 ## Usage
 ```js
-const hk = require('hacker-news-api')();
+const hk = require('@moondef/hacker-news-api')();
 (async () => {
   const popular = await hk.getPopular(); // you will get IDs of popular news
   const popularArr = JSON.parse(popular);
