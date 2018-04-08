@@ -1,5 +1,5 @@
 # hacker-news-api
-### API for news.ycombinator.com
+### JavaScript wrapper for the official Hacker News API
 
 ## Usage
 ```
@@ -15,7 +15,6 @@ const hk = require('@moondef/hacker-news-api');
 
   console.log(newsItem);
 })();
-
 ```
 
 ## Methods
