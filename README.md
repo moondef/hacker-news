@@ -31,4 +31,4 @@ const hk = require('@moondef/hacker-news-api');
 - getNewStories() // Array
 - getTopStories() // Array
 - getBestStories() // Array
-```-
+```
