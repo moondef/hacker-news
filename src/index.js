@@ -1,185 +1,156 @@
 const rp = require("request-promise");
+const baseUrl = "https://hacker-news.firebaseio.com/v0/";
 
-class HackerNews {
-  constructor() {
-    this.baseUrl = "https://hacker-news.firebaseio.com/v0/";
+module.exports.getPopular = async function() {
+  try {
+    const response = rp({
+      baseUrl,
+      url: "/topstories.json",
+      json: true
+    });
+
+    return response;
+  } catch (err) {
+    throw err;
   }
+};
 
-  async getPopular() {
-    const { baseUrl } = this;
+module.exports.getUser = async function(nickname) {
+  try {
+    const response = rp({
+      baseUrl,
+      url: `/user/${nickname}.json`,
+      json: true
+    });
 
-    try {
-      const response = rp({
-        baseUrl,
-        url: "/topstories.json",
-        json: true
-      });
-
-      return response;
-    } catch (err) {
-      throw err;
-    }
+    return response;
+  } catch (err) {
+    throw err;
   }
+};
 
-  async getUser(nickname) {
-    const { baseUrl } = this;
+module.exports.getItem = async function(itemID) {
+  try {
+    const response = rp({
+      baseUrl,
+      url: `/item/${itemID}.json`,
+      json: true
+    });
 
-    try {
-      const response = rp({
-        baseUrl,
-        url: `/user/${nickname}.json`,
-        json: true
-      });
-
-      return response;
-    } catch (err) {
-      throw err;
-    }
+    return response;
+  } catch (err) {
+    throw err;
   }
+};
 
-  async getItem(itemID) {
-    const { baseUrl } = this;
+module.exports.getMaxItem = async function() {
+  try {
+    const response = rp({
+      baseUrl,
+      url: "/maxitem.json",
+      json: true
+    });
 
-    try {
-      const response = rp({
-        baseUrl,
-        url: `/item/${itemID}.json`,
-        json: true
-      });
-
-      return response;
-    } catch (err) {
-      throw err;
-    }
+    return response;
+  } catch (err) {
+    throw err;
   }
+};
 
-  async getMaxItem() {
-    const { baseUrl } = this;
+module.exports.getAskStories = async function() {
+  try {
+    const response = rp({
+      baseUrl,
+      url: "/askstories.json",
+      json: true
+    });
 
-    try {
-      const response = rp({
-        baseUrl,
-        url: "/maxitem.json",
-        json: true
-      });
-
-      return response;
-    } catch (err) {
-      throw err;
-    }
+    return response;
+  } catch (err) {
+    throw err;
   }
+};
 
-  async getAskStories() {
-    const { baseUrl } = this;
+module.exports.getShowStories = async function() {
+  try {
+    const response = rp({
+      baseUrl,
+      url: "/showstories.json",
+      json: true
+    });
 
-    try {
-      const response = rp({
-        baseUrl,
-        url: "/askstories.json",
-        json: true
-      });
-
-      return response;
-    } catch (err) {
-      throw err;
-    }
+    return response;
+  } catch (err) {
+    throw err;
   }
+};
 
-  async getShowStories() {
-    const { baseUrl } = this;
+module.exports.getJobStories = async function() {
+  try {
+    const response = rp({
+      baseUrl,
+      url: "/jobstories.json",
+      json: true
+    });
 
-    try {
-      const response = rp({
-        baseUrl,
-        url: "/showstories.json",
-        json: true
-      });
-
-      return response;
-    } catch (err) {
-      throw err;
-    }
+    return response;
+  } catch (err) {
+    throw err;
   }
+};
 
-  async getJobStories() {
-    const { baseUrl } = this;
+module.exports.getUpdates = async function() {
+  try {
+    const response = rp({
+      baseUrl,
+      url: "/updates.json",
+      json: true
+    });
 
-    try {
-      const response = rp({
-        baseUrl,
-        url: "/jobstories.json",
-        json: true
-      });
-
-      return response;
-    } catch (err) {
-      throw err;
-    }
+    return response;
+  } catch (err) {
+    throw err;
   }
+};
 
-  async getUpdates() {
-    const { baseUrl } = this;
+module.exports.getNewStories = async function() {
+  try {
+    const response = rp({
+      baseUrl,
+      url: "/newstories.json",
+      json: true
+    });
 
-    try {
-      const response = rp({
-        baseUrl,
-        url: "/updates.json",
-        json: true
-      });
-
-      return response;
-    } catch (err) {
-      throw err;
-    }
+    return response;
+  } catch (err) {
+    throw err;
   }
+};
 
-  async getNewStories() {
-    const { baseUrl } = this;
+module.exports.getTopStories = async function() {
+  try {
+    const response = rp({
+      baseUrl,
+      url: "/topstories.json",
+      json: true
+    });
 
-    try {
-      const response = rp({
-        baseUrl,
-        url: "/newstories.json",
-        json: true
-      });
-
-      return response;
-    } catch (err) {
-      throw err;
-    }
+    return response;
+  } catch (err) {
+    throw err;
   }
+};
 
-  async getTopStories() {
-    const { baseUrl } = this;
+module.exports.getBestStories = async function() {
+  try {
+    const response = rp({
+      baseUrl,
+      url: "/beststories.json",
+      json: true
+    });
 
-    try {
-      const response = rp({
-        baseUrl,
-        url: "/topstories.json",
-        json: true
-      });
-
-      return response;
-    } catch (err) {
-      throw err;
-    }
+    return response;
+  } catch (err) {
+    throw err;
   }
-
-  async getBestStories() {
-    const { baseUrl } = this;
-
-    try {
-      const response = rp({
-        baseUrl,
-        url: "/beststories.json",
-        json: true
-      });
-
-      return response;
-    } catch (err) {
-      throw err;
-    }
-  }
-}
-
-module.exports = HackerNews;
+};
