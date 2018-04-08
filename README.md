@@ -7,8 +7,7 @@ $ npm install --save @moondef/hacker-news-api
 ```
 
 ```js
-const HackerNewsApi = require('@moondef/hacker-news-api');
-const hk = new HackerNewsApi;
+const hk = require('@moondef/hacker-news-api');
 
 (async () => {
   const popular = await hk.getPopular(); // you will get IDs of popular news
@@ -32,4 +31,4 @@ const hk = new HackerNewsApi;
 - getNewStories() // Array
 - getTopStories() // Array
 - getBestStories() // Array
-```
+```-
