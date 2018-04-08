@@ -1,6 +1,8 @@
 # hacker-news-api
 ### JavaScript wrapper for the official Hacker News API
 
+[![npm package](https://img.shields.io/npm/v/@moondef/hacker-news-api.svg)](https://www.npmjs.com/package/@moondef/hacker-news-api)
+
 ## Usage
 ```
 $ npm install --save @moondef/hacker-news-api
