@@ -15,7 +15,7 @@ module.exports.getPopular = async () => {
   }
 };
 
-module.exports.getUser = async (nickname) => {
+module.exports.getUser = async nickname => {
   try {
     const response = rp({
       baseUrl,
@@ -29,7 +29,7 @@ module.exports.getUser = async (nickname) => {
   }
 };
 
-module.exports.getItem = async (itemID) => {
+module.exports.getItem = async itemID => {
   try {
     const response = rp({
       baseUrl,
