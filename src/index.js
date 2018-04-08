@@ -1,7 +1,7 @@
 const rp = require("request-promise");
 const baseUrl = "https://hacker-news.firebaseio.com/v0/";
 
-module.exports.getPopular = async function() {
+module.exports.getPopular = async () => {
   try {
     const response = rp({
       baseUrl,
@@ -15,7 +15,7 @@ module.exports.getPopular = async function() {
   }
 };
 
-module.exports.getUser = async function(nickname) {
+module.exports.getUser = async (nickname) => {
   try {
     const response = rp({
       baseUrl,
@@ -29,7 +29,7 @@ module.exports.getUser = async function(nickname) {
   }
 };
 
-module.exports.getItem = async function(itemID) {
+module.exports.getItem = async (itemID) => {
   try {
     const response = rp({
       baseUrl,
@@ -43,7 +43,7 @@ module.exports.getItem = async function(itemID) {
   }
 };
 
-module.exports.getMaxItem = async function() {
+module.exports.getMaxItem = async () => {
   try {
     const response = rp({
       baseUrl,
@@ -57,7 +57,7 @@ module.exports.getMaxItem = async function() {
   }
 };
 
-module.exports.getAskStories = async function() {
+module.exports.getAskStories = async () => {
   try {
     const response = rp({
       baseUrl,
@@ -71,7 +71,7 @@ module.exports.getAskStories = async function() {
   }
 };
 
-module.exports.getShowStories = async function() {
+module.exports.getShowStories = async () => {
   try {
     const response = rp({
       baseUrl,
@@ -85,7 +85,7 @@ module.exports.getShowStories = async function() {
   }
 };
 
-module.exports.getJobStories = async function() {
+module.exports.getJobStories = async () => {
   try {
     const response = rp({
       baseUrl,
@@ -99,7 +99,7 @@ module.exports.getJobStories = async function() {
   }
 };
 
-module.exports.getUpdates = async function() {
+module.exports.getUpdates = async () => {
   try {
     const response = rp({
       baseUrl,
@@ -113,7 +113,7 @@ module.exports.getUpdates = async function() {
   }
 };
 
-module.exports.getNewStories = async function() {
+module.exports.getNewStories = async () => {
   try {
     const response = rp({
       baseUrl,
@@ -127,7 +127,7 @@ module.exports.getNewStories = async function() {
   }
 };
 
-module.exports.getTopStories = async function() {
+module.exports.getTopStories = async () => {
   try {
     const response = rp({
       baseUrl,
@@ -141,7 +141,7 @@ module.exports.getTopStories = async function() {
   }
 };
 
-module.exports.getBestStories = async function() {
+module.exports.getBestStories = async () => {
   try {
     const response = rp({
       baseUrl,
