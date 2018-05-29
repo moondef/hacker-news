@@ -15,7 +15,7 @@
     "api"
   ],
   "author": "Stepan Samko",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/moondef/hacker-news-api/issues"
   },
