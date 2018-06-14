@@ -7,6 +7,10 @@
 ```
 $ npm install --save @moondef/hacker-news-api
 ```
+or
+```
+$ yarn add @moondef/hacker-news-api
+```
 
 ```js
 const hk = require('@moondef/hacker-news-api');
